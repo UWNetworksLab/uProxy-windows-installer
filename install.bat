@@ -1,17 +1,17 @@
-:: Name:     uProxyFirefoxWindowsInstaller.bat
+:: Name:     install.bat
 :: Purpose:  Builds Windows Installer for Firefox with uProxy
-:: Author:   @gitlaura
-:: Revision: March 2016 - initial version
 
 @ECHO OFF
 SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 
 REM Current directory path
 SET parent=%~dp0
+
 REM URL to get the uProxy add-on, get here: https://addons.mozilla.org/en-US/firefox/addon/uproxy-firefox/
 SET uproxyAddonURL=https://addons.mozilla.org/firefox/downloads/file/401357/uproxy_beta-0.8.36-fx-windows.xpi
+
 REM Set version and language with default values
-SET version=44.0
+SET version=45.0.1
 SET languages=en-US zh-CN fa ar tr vi
 
 REM Set version and language from optional args
@@ -79,7 +79,6 @@ cscript.exe src\downloadfile.vbs
 IF errorlevel 1 GOTO End
 
 REM Check that uproxy.xpi downloaded successfully
-REM Look for correct link here: https://addons.mozilla.org/en-US/firefox/addon/uproxy-firefox/
 IF NOT exist !fileLocation! (
     ECHO Error: Could not download xpi file from Firefox. Get correct link here: https://addons.mozilla.org/en-US/firefox/addon/uproxy-firefox/
     GOTO End
@@ -101,16 +100,15 @@ FOR %%s in (%languages%) DO (
     REM Downloading firefox setup.exe from Mozilla
     SET fileURL=http://ftp.mozilla.org/pub/firefox/releases/%version%/win64/!lang!/Firefox%%20Setup%%20%version%.exe
     SET fileLocation=!firefoxPath!\firefox_%version%_!lang!.exe
-    SET downloadfilestatus=okay
     cscript.exe src\downloadfile.vbs
     
     REM Check that setup.exe downloaded successfully
     IF NOT exist !fileLocation! (
-        ECHO Check http://ftp.mozilla.org/pub/firefox/releases/ for valid versions and languages.
+        ECHO Could not download Firefox. Check http://ftp.mozilla.org/pub/firefox/releases/ for valid versions and languages.
         GOTO End
     )
     
-    REM Extracting files from setup.exe
+    REM Extracting files from Firefox_setup.exe
     %sevenzip% x -y !fileLocation! -o!buildPath!
     
     SET fileURL=
