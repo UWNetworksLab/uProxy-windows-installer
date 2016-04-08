@@ -12,7 +12,7 @@ REM URL to get the uProxy add-on, get here: https://addons.mozilla.org/en-US/fir
 SET uproxyAddonURL=https://addons.mozilla.org/firefox/downloads/file/401357/uproxy_beta-0.8.36-fx-windows.xpi
 REM Set version and language with default values
 SET version=44.0
-SET languages=en-US zh-CN
+SET languages=en-US zh-CN fa ar tr vi
 
 REM Set version and language from optional args
 :Argloop
