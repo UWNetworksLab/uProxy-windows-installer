@@ -117,7 +117,7 @@ FOR %%s in (%languages%) DO (
     SET fileLocation=
     
     REM Copy new files from src to build
-    COPY /Y src\core\mozilla.cfg !buildPath!\core\mozilla.cfg
+    COPY /Y src\core\custom-config.cfg !buildPath!\core\custom-config.cfg
     IF NOT exist !buildPath!\core\defaults\pref {
         MKDIR !buildPath!\core\defaults\pref\
     }
@@ -130,7 +130,7 @@ FOR %%s in (%languages%) DO (
     
     REM Add each file to the uninstall file
     SET uninstallFile=!buildPath!\core\precomplete
-    ECHO remove "mozilla.cfg" >> !uninstallFile!
+    ECHO remove "custom-config.cfg" >> !uninstallFile!
     ECHO remove "defaults/pref/local-settings.js" >> !uninstallFile!
     ECHO remove "defaults/pref/user.js" >> !uninstallFile!
     ECHO remove "defaults/pref/channel-prefs.js" >> !uninstallFile!
