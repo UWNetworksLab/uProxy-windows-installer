@@ -75,6 +75,7 @@ FOR %%f in (build dist firefox extension) DO (
 REM Download latest uProxy add-on from uproxyAddonURL
 SET fileURL=%uproxyAddonURL%
 SET fileLocation=%parent%extension\uproxy.xpi
+REM downloadfile.vbs is a script that downloads the file at fileURL to the set fileLocation
 cscript.exe src\downloadfile.vbs
 IF errorlevel 1 GOTO End
 
@@ -123,8 +124,9 @@ FOR %%s in (%languages%) DO (
     COPY /Y src\core\pref\user.js !buildPath!\core\defaults\pref\user.js
     COPY /Y src\core\pref\channel-prefs.js !buildPath!\core\defaults\pref\channel-prefs.js
 
-    REM Copy landing page to core
-    COPY /Y src\core\uproxy.html !buildPath!\core\uproxy.html
+    REM Copy landing page for language to core
+    REM TODO: Replace 'en-US' with '!lang!' when we have landing pages for each language
+    COPY /Y src\landingpage\en-US\uproxy.html !buildPath!\core\uproxy.html
     
     REM Add each file to the uninstall file
     SET uninstallFile=!buildPath!\core\precomplete
@@ -154,7 +156,7 @@ FOR %%s in (%languages%) DO (
     ECHO Completed build for !distFile!
     
     REM Sign final exe with signtool.exe
-    REM Uncomment following line to sign package  
+    REM TODO: Uncomment following line to sign package when we have a cert 
     REM %signtool% sign /v /n uProxy /p [password] /f [uProxy.pfx] /t http://timestamp.verisign.com/scripts/timstamp.dll !distPath!\!distFile!
 )
 
