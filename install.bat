@@ -1,7 +1,7 @@
 :: Name:     install.bat
 :: Purpose:  Builds Windows Installer for Firefox with uProxy
 :: Version: 0.1.1
-:: uProxy version: 0.8.36
+:: uProxy version: 0.8.39
 
 @ECHO OFF
 SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
@@ -10,11 +10,11 @@ REM Current directory path
 SET parent=%~dp0
 
 REM URL to get the uProxy add-on, get here: https://addons.mozilla.org/en-US/firefox/addon/uproxy-firefox/
-SET uproxyAddonURL=https://addons.mozilla.org/firefox/downloads/file/401357/uproxy_beta-0.8.36-fx-windows.xpi
+SET uproxyAddonURL=https://addons.mozilla.org/firefox/downloads/file/421107/uproxy_beta-0.8.39-fx-windows.xpi
 
 REM Set version and language with default values
 SET version=45.0.1
-SET languages=en-US zh-CN fa ar tr vi
+SET languages=en-US zh-CN
 
 REM Set version and language from optional args
 :Argloop

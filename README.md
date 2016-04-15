@@ -11,7 +11,7 @@ The uProxy Windows Installer creates a modified version of the Firefox Windows I
 ### To build Windows installer:
 - `git clone https://github.com/uProxy/uproxy-windows-installer.git`
 - `install.bat`
-- Grab executable files from `dist\%language%\Firefox_with_uProxy.exe` and upload them to [releases](https://github.com/uProxy/uproxy-windows-installer/releases)
+- Grab executable files from `dist\%language%\Firefox_with_uProxy.exe` and upload them to [releases](https://github.com/uProxy/uproxy-windows-installer/releases). By default we build versions for English and Chinese.
 
 ##### Build for a specfic Firefox version or language:
 - We support a couple optional arguments for building specific versions of Firefox
@@ -36,3 +36,8 @@ The uProxy Windows Installer creates a modified version of the Firefox Windows I
 - `git push <your_branch_name> origin/master`
 - Create pull request
 - If you want to build the new releases, run `install.bat` and upload new executables to [releases](https://github.com/uProxy/uproxy-windows-installer/releases)
+
+###To test a release:
+- If you've already installed Firefox on your computer, uninstall Firefox.
+- Clear old Firefox data and profiles by deleting two directories: `C:\Users\<user>\AppData\Roaming\Mozilla\` and `C:\Users\<user>\AppData\Local\Mozilla`
+- Run the new setup .exe file. Check to see that the landing page is displayed and uProxy is installed.
