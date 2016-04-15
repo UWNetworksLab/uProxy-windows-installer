@@ -1,5 +1,7 @@
 :: Name:     install.bat
 :: Purpose:  Builds Windows Installer for Firefox with uProxy
+:: Version: 0.1.1
+:: uProxy version: 0.8.36
 
 @ECHO OFF
 SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
