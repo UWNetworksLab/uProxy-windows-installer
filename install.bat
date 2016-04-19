@@ -125,10 +125,6 @@ FOR %%s in (%languages%) DO (
     COPY /Y src\core\pref\local-settings.js !buildPath!\core\defaults\pref\local-settings.js
     COPY /Y src\core\pref\user.js !buildPath!\core\defaults\pref\user.js
     COPY /Y src\core\pref\channel-prefs.js !buildPath!\core\defaults\pref\channel-prefs.js
-
-    REM Copy landing page for language to core
-    REM TODO: Replace 'en-US' with '!lang!' when we have landing pages for each language
-    COPY /Y src\landingpage\en-US\uproxy.html !buildPath!\core\uproxy.html
     
     REM Add each file to the uninstall file
     SET uninstallFile=!buildPath!\core\precomplete
@@ -136,9 +132,13 @@ FOR %%s in (%languages%) DO (
     ECHO remove "defaults/pref/local-settings.js" >> !uninstallFile!
     ECHO remove "defaults/pref/user.js" >> !uninstallFile!
     ECHO remove "defaults/pref/channel-prefs.js" >> !uninstallFile!
-    ECHO remove "uproxy.html" >> !uninstallFile!
     ECHO rmdir "defaults/pref/" >> !uninstallFile!
     ECHO rmdir "defaults/" >> !uninstallFile!
+
+    REM Copy landing page for language to core
+    REM TODO: Uncomment following lines to add landing page
+    REM COPY /Y src\landingpage\en-US\uproxy.html !buildPath!\core\uproxy.html
+    REM ECHO remove "uproxy.html" >> !uninstallFile!
     
     REM Copy all distribution files last
     MKDIR !buildPath!\core\distribution
