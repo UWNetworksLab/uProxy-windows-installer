@@ -2,3 +2,4 @@ build
 dist
 extension
 firefox
+*.DS_Store

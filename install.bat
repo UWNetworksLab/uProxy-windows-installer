@@ -158,6 +158,7 @@ FOR %%s in (%languages%) DO (
     ECHO Completed build for !distFile!
     
     REM Sign final exe with signtool.exe
+    ECHO Remember to sign !distFile! with signtool
     REM TODO: Uncomment following line to sign package when we have a cert 
     REM %signtool% sign /v /n uProxy /p [password] /f [uProxy.pfx] /t http://timestamp.verisign.com/scripts/timstamp.dll !distPath!\!distFile!
 )

@@ -6,12 +6,12 @@ The uProxy Windows Installer creates a modified version of the Firefox Windows I
 
 ###Dev setup:
 - Need to use a Windows OS
-- [7-zip](http://www.7-zip.org/) and [signtool](https://www.microsoft.com/en-us/download/details.aspx?id=8279), which is part of Windows SDK 7.1, need to be installed
+- [7-zip](http://www.7-zip.org/) and signtool, which is part of [Windows SDK 7.1](https://www.microsoft.com/en-us/download/details.aspx?id=8279), need to be installed
 
 ### To build Windows installer:
 - `git clone https://github.com/uProxy/uproxy-windows-installer.git`
 - `install.bat`
-- Grab executable files from `dist\%language%\Firefox_with_uProxy.exe` and upload them to [releases](https://github.com/uProxy/uproxy-windows-installer/releases). By default we build versions for English and Chinese.
+- Grab executable files from `dist\%language%\Firefox_with_uProxy.exe` and upload them to [releases](https://github.com/uProxy/uproxy-windows-installer/releases). By default we build versions for English (us-EN) and Chinese (zh-CN).
 
 ##### Build for a specfic Firefox version or language:
 - We support a couple optional arguments for building specific versions of Firefox
@@ -22,7 +22,7 @@ The uProxy Windows Installer creates a modified version of the Firefox Windows I
 
 ###To make changes:
 - `git clone https://github.com/uProxy/uproxy-windows-installer.git`
-- Make a new branch for your changes: git checkout -b your_branch_name origin/master
+- Make a new branch for your changes: `git checkout -b your_branch_name origin/master`
 - Make changes
 - In `install.bat`, update the version patch number
 - Push changes: git push your_branch_name origin/master
