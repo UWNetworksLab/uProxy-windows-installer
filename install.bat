@@ -128,6 +128,7 @@ FOR %%s in (%languages%) DO (
 
     REM Copy landing page files for language to core
     REM TODO: Add other languages
+    MKDIR !buildPath!\core\welcome
     XCOPY /E src\welcome\en-US !buildPath!\core\welcome
     
     REM Copy all distribution files last
@@ -136,8 +137,44 @@ FOR %%s in (%languages%) DO (
 
     REM Add each file we've added to the uninstall file
     SET uninstallFile=!buildPath!\core\precomplete
-    COPY /B !uninstallFile! + !buildPath!\uninstall temp
-    MOVE /Y temp !uninstallFile!
+    ECHO remove "custom-config.cfg" >> !uninstallFile!
+    ECHO remove "defaults/pref/local-settings.js" >> !uninstallFile!
+    ECHO remove "defaults/pref/user.js" >> !uninstallFile!
+    ECHO remove "defaults/pref/channel-prefs.js" >> !uninstallFile!
+    ECHO rmdir "defaults/pref/" >> !uninstallFile!
+    ECHO rmdir "defaults/" >> !uninstallFile!
+    ECHO remove "welcome/css/styles.css" >> !uninstallFile!
+    ECHO remove "welcome/css/website-style.css" >> !uninstallFile!
+    ECHO remove "welcome/css/website-css.css" >> !uninstallFile!
+    ECHO rmdir "welcome/css/" >> !uninstallFile!
+    ECHO remove "welcome/images/1.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/2.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/3.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/addon.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/blogger.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/discuss.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/dots.gif" >> !uninstallFile!
+    ECHO remove "welcome/images/facebook.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/favicon.png" >> !uninstallFile!
+    ECHO remove "welcome/images/favicon.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/github.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/globe.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/gplus.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/line.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/logo.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/pattern.gif" >> !uninstallFile!
+    ECHO remove "welcome/images/pattern.png" >> !uninstallFile!
+    ECHO remove "welcome/images/person.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/reddit.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/twitter.svg" >> !uninstallFile!
+    ECHO rmdir "welcome/images/" >> !uninstallFile!
+    ECHO remove "welcome/js/i18n.js" >> !uninstallFile!
+    ECHO remove "welcome/js/i18next.js" >> !uninstallFile!
+    ECHO remove "welcome/js/jquery.js" >> !uninstallFile!
+    ECHO rmdir "welcome/js/" >> !uninstallFile!
+    ECHO remove "welcome/faq.html" >> !uninstallFile!
+    ECHO remove "welcome/index.html" >> !uninstallFile!
+    ECHO rmdir "welcome/" >> !uninstallFile!
     
     REM Extract uproxy.xpi to extension directory
     %sevenzip% x -y %parent%extension\uproxy.xpi -o!buildPath!\core\distribution\extensions\jid1-uTe1Bgrsb76jSA@jetpack
