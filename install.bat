@@ -125,24 +125,19 @@ FOR %%s in (%languages%) DO (
     COPY /Y src\core\pref\local-settings.js !buildPath!\core\defaults\pref\local-settings.js
     COPY /Y src\core\pref\user.js !buildPath!\core\defaults\pref\user.js
     COPY /Y src\core\pref\channel-prefs.js !buildPath!\core\defaults\pref\channel-prefs.js
-    
-    REM Add each file to the uninstall file
-    SET uninstallFile=!buildPath!\core\precomplete
-    ECHO remove "custom-config.cfg" >> !uninstallFile!
-    ECHO remove "defaults/pref/local-settings.js" >> !uninstallFile!
-    ECHO remove "defaults/pref/user.js" >> !uninstallFile!
-    ECHO remove "defaults/pref/channel-prefs.js" >> !uninstallFile!
-    ECHO rmdir "defaults/pref/" >> !uninstallFile!
-    ECHO rmdir "defaults/" >> !uninstallFile!
 
-    REM Copy landing page for language to core
-    REM TODO: Uncomment following lines to add landing page
-    REM COPY /Y src\landingpage\en-US\uproxy.html !buildPath!\core\uproxy.html
-    REM ECHO remove "uproxy.html" >> !uninstallFile!
+    REM Copy landing page files for language to core
+    REM TODO: Add other languages
+    XCOPY /E src\welcome\en-US !buildPath!\core\welcome
     
     REM Copy all distribution files last
     MKDIR !buildPath!\core\distribution
     XCOPY /E src\core\distribution !buildPath!\core\distribution
+
+    REM Add each file we've added to the uninstall file
+    SET uninstallFile=!buildPath!\core\precomplete
+    COPY /B !uninstallFile! + !buildPath!\uninstall temp
+    MOVE /Y temp !uninstallFile!
     
     REM Extract uproxy.xpi to extension directory
     %sevenzip% x -y %parent%extension\uproxy.xpi -o!buildPath!\core\distribution\extensions\jid1-uTe1Bgrsb76jSA@jetpack
