@@ -2,4 +2,5 @@ build
 dist
 extension
 firefox
+src/welcome/messages.json
 *.DS_Store

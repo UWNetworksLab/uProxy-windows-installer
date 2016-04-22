@@ -290,7 +290,7 @@ html {
     margin-right: 0;
     overflow: hidden;
   }
-  .addon span{
+  .addon .welcome{
     color: #00C2AE;
     font-weight: 600;
 
@@ -372,13 +372,13 @@ a:hover {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .addon button{
-  margin-bottom: 0px;
   height: 25px;
   font-size: 18px;
   color: #155160;
   background-color: #fff !important;
   padding: 0px;
-  float: right;
+  margin: 0px 20px;
+  float: left;
   hover {
     color: #fff;
     background-color: #fff !important;

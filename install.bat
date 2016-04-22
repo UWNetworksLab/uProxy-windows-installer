@@ -129,7 +129,8 @@ FOR %%s in (%languages%) DO (
     REM Copy landing page files for language to core
     REM TODO: Add other languages
     MKDIR !buildPath!\core\welcome
-    XCOPY /E src\welcome\en-US !buildPath!\core\welcome
+    XCOPY /E src\welcome !buildPath!\core\welcome
+    COPY /Y src\locales\!lang!\messages.json !buildPath!\core\welcome\messages.json
     
     REM Copy all distribution files last
     MKDIR !buildPath!\core\distribution
@@ -168,10 +169,12 @@ FOR %%s in (%languages%) DO (
     ECHO remove "welcome/images/reddit.svg" >> !uninstallFile!
     ECHO remove "welcome/images/twitter.svg" >> !uninstallFile!
     ECHO rmdir "welcome/images/" >> !uninstallFile!
+    ECHO remove "welcome/js/addon.js" >> !uninstallFile!
     ECHO remove "welcome/js/i18n.js" >> !uninstallFile!
     ECHO remove "welcome/js/i18next.js" >> !uninstallFile!
     ECHO remove "welcome/js/jquery.js" >> !uninstallFile!
     ECHO rmdir "welcome/js/" >> !uninstallFile!
+    ECHO remove "welcome/messages.json" >> !uninstallFile!
     ECHO remove "welcome/faq.html" >> !uninstallFile!
     ECHO remove "welcome/index.html" >> !uninstallFile!
     ECHO rmdir "welcome/" >> !uninstallFile!
