@@ -5,7 +5,9 @@ i18n.init({
   useDataAttrOptions: true
 });
 
-// Load local json file
+// Loads local json file. This only works on Firefox, Chrome gives the error "Cross 
+// origin requests are only supported for protocol schemes: http, data, chrome, 
+// chrome-extension, https, chrome-extension-resource."
 // http://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
 function loadLanguage(filename, updatePage) {   
   var xobj = new XMLHttpRequest();
