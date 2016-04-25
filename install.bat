@@ -137,6 +137,7 @@ FOR %%s in (%languages%) DO (
     XCOPY /E src\core\distribution !buildPath!\core\distribution
 
     REM Add each file we've added to the uninstall file
+    REM Remove files first and then directories
     SET uninstallFile=!buildPath!\core\precomplete
     ECHO remove "custom-config.cfg" >> !uninstallFile!
     ECHO remove "defaults/pref/local-settings.js" >> !uninstallFile!
@@ -145,9 +146,6 @@ FOR %%s in (%languages%) DO (
     ECHO rmdir "defaults/pref/" >> !uninstallFile!
     ECHO rmdir "defaults/" >> !uninstallFile!
     ECHO remove "welcome/css/styles.css" >> !uninstallFile!
-    ECHO remove "welcome/css/website-style.css" >> !uninstallFile!
-    ECHO remove "welcome/css/website-css.css" >> !uninstallFile!
-    ECHO rmdir "welcome/css/" >> !uninstallFile!
     ECHO remove "welcome/images/1.svg" >> !uninstallFile!
     ECHO remove "welcome/images/2.svg" >> !uninstallFile!
     ECHO remove "welcome/images/3.svg" >> !uninstallFile!
@@ -168,15 +166,16 @@ FOR %%s in (%languages%) DO (
     ECHO remove "welcome/images/person.svg" >> !uninstallFile!
     ECHO remove "welcome/images/reddit.svg" >> !uninstallFile!
     ECHO remove "welcome/images/twitter.svg" >> !uninstallFile!
-    ECHO rmdir "welcome/images/" >> !uninstallFile!
     ECHO remove "welcome/js/addon.js" >> !uninstallFile!
     ECHO remove "welcome/js/i18n.js" >> !uninstallFile!
     ECHO remove "welcome/js/i18next.js" >> !uninstallFile!
     ECHO remove "welcome/js/jquery.js" >> !uninstallFile!
-    ECHO rmdir "welcome/js/" >> !uninstallFile!
     ECHO remove "welcome/messages.json" >> !uninstallFile!
     ECHO remove "welcome/faq.html" >> !uninstallFile!
     ECHO remove "welcome/index.html" >> !uninstallFile!
+    ECHO rmdir "welcome/images/" >> !uninstallFile!
+    ECHO rmdir "welcome/css/" >> !uninstallFile!
+    ECHO rmdir "welcome/js/" >> !uninstallFile!
     ECHO rmdir "welcome/" >> !uninstallFile!
     
     REM Extract uproxy.xpi to extension directory
@@ -192,10 +191,10 @@ FOR %%s in (%languages%) DO (
     COPY /B src\7zSD.sfx+src\app.tag+!buildPath!\app.7z !distPath!\!distFile!
     ECHO Completed build for !distFile!
     
-    REM Sign final exe with signtool.exe
-    ECHO Remember to sign !distFile! with signtool
-    REM TODO: Uncomment following line to sign package when we have a cert 
-    REM %signtool% sign /v /n uProxy /p [password] /f [uProxy.pfx] /t http://timestamp.verisign.com/scripts/timstamp.dll !distPath!\!distFile!
+    REM Sign final .exe with signtool
+    REM Use hash algorithm SHA256 because the default, SHA1,
+    REM is being depreciated in 2017
+    %signtool% sign /fd SHA256 /t http://timestamp.digicert.com /a !distPath!\!distFile!    
 )
 
 :END
