@@ -9,16 +9,23 @@ i18n.init({
 // origin requests are only supported for protocol schemes: http, data, chrome, 
 // chrome-extension, https, chrome-extension-resource."
 // http://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
-function loadLanguage(filename, updatePage) {   
+function loadLanguage(filename) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("text/plain");
   xobj.open('GET', filename, true);
   xobj.onreadystatechange = function () {
     if (xobj.readyState == 4 && xobj.status == "200") {
-      updatePage(JSON.parse(xobj.responseText));
+      updateLanguage(JSON.parse(xobj.responseText));
     }
   };
   xobj.send(null);  
+}
+
+function updateLanguage(jsonDictionary){
+  var languageResources = jsonDictionary;
+  i18n.addResources(userLanguage.substring(0,2), 'translation',
+    createI18nDictionary(languageResources));
+  translatePage();
 }
 
 function createI18nDictionary(sourceFile) {
@@ -36,16 +43,14 @@ function translatePage() {
   });
 }
 
-function updateLanguage(jsonDictionary){
-  var languageResources = jsonDictionary;
-  i18n.addResources(userLanguage.substring(0,2), 'translation',
-    createI18nDictionary(languageResources));
-  translatePage();
-}
-
 // userLanguage doesn't matter because there
 // will be one messages.json file per Windows 
-// Installer. userLanguage has to be 2 characters.
+// Installer; userLanguage has to be 2 characters.
 var userLanguage = 'en';
+
+// The install script grabs the messages.json file
+// from the correct locale and puts it in the welcome 
+// directory
 var dictionaryFile = 'messages.json'
-loadLanguage(dictionaryFile, updateLanguage);
+
+loadLanguage(dictionaryFile);

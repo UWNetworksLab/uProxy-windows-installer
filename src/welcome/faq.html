@@ -143,12 +143,12 @@
       ['whatIsBeta', 'WHAT_IS_BETA'],
       ['howDoISubmit', 'HOW_DO_I_SUBMIT']
     ];
-    for (var i in faqs) {
-      var faqTitleSection = "<section class='faq faqlinks' id='links'><ul class='links start'><li><a href='#" + faqs[i][0] + "' class='i18n' data-i18n='" + faqs[i][1] +"'></a></li></ul></section>";
+    for (var index in faqs) {
+      var faqTitleSection = "<section class='faq faqlinks' id='links'><ul class='links start'><li><a href='#" + faqs[index][0] + "' class='i18n' data-i18n='" + faqs[index][1] +"'></a></li></ul></section>";
       $("#faq-links-content").append(faqTitleSection);
     }
-    for (var i in faqs) {
-      var faqSection = "<section class='faq' id='" + faqs[i][0] +"'><h2 class='i18n' data-i18n='" + faqs[i][1] + "'></h2><div class='i18n' data-i18n='[html]" + faqs[i][1] + "_ANSWER'></div><a class='top i18n' href='#links' data-i18n='BACK_TO_TOP'></a></section>";
+    for (var index in faqs) {
+      var faqSection = "<section class='faq' id='" + faqs[index][0] +"'><h2 class='i18n' data-i18n='" + faqs[index][1] + "'></h2><div class='i18n' data-i18n='[html]" + faqs[index][1] + "_ANSWER'></div><a class='top i18n' href='#links' data-i18n='BACK_TO_TOP'></a></section>";
       $("#faq-content").append(faqSection);
     }
   </script>
