@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>uProxy FAQs</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="addon" style="display: none;">
+    <button onclick="closeAddOn()">x</button>
+    <p>
+      <img src="images/addon.svg">
+      <span class="i18n" data-i18n="[html]ADD_ON"></span>
+    </p>
+  </div>
+
+  <div class="pattern" id="parallax">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns" style="margin-top: 20%; margin-bottom: 20%; text-align:left; text-decoration: none;">
+          <a href="index.html" style="border-bottom: 0px;"><img src="images/logo.svg"></a>
+          <h4 class="i18n" data-i18n="UPROXY_FAQ_TITLE"></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="faq-links-content" class="twelve columns">
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="faq-content" class="twelve columns">
+    </div>
+  </div>
+
+  <div class="width" id="footer">
+    <div class="container" id="margintop">
+      <div class="twelve columns">
+        <h2 class="i18n" data-i18n="UPROXY_IS_SOCIAL"></h2>
+      </div>
+
+      <div class="one columns" id="footericons">
+        <a href="https://github.com/uProxy/uproxy" target="_blank"><img src="images/github.svg"></a>
+        <a href="https://github.com/uProxy/uproxy" target="_blank"><p>Github</p></a>
+      </div>
+
+      <div class="one columns" id="footericons">
+        <a href="https://blog.uproxy.org/" target="_blank"><img src="images/blogger.svg"></a>
+        <a href="https://blog.uproxy.org/" target="_blank"><p>Blogger</p></a>
+      </div>
+
+      <div class="one columns" id="footericons">
+        <a href="https://twitter.com/uproxyorg/" target="_blank"><img src="images/twitter.svg"></a>
+        <a href="https://twitter.com/uproxyorg/" target="_blank"><p>Twitter</p></a>
+      </div>
+
+      <div class="one columns" id="footericons">
+        <a href="https://groups.google.com/forum/#%21forum/uproxy-discuss" target="_blank"><img src="images/discuss.svg"></a>
+        <a href="https://groups.google.com/forum/#%21forum/uproxy-discuss" target="_blank"><p class="i18n" data-i18n="DISCUSS"></p></a>
+      </div>
+
+      <div class="one columns" id="footericons">
+        <a href="https://www.reddit.com/r/uproxy" target="_blank"><img src="images/reddit.svg"></a>
+        <a href="https://www.reddit.com/r/uproxy" target="_blank"><p>Reddit</p></a>
+      </div>
+
+      <div class="one columns" id="footericons">
+        <a href="https://plus.google.com/+UproxyOrg/" target="_blank"><img src="images/gplus.svg"></a>
+        <a href="https://plus.google.com/+UproxyOrg/" target="_blank"><p>gplus</p></a>
+      </div>
+
+      <div class="one columns" id="footericons">
+        <a href="https://www.facebook.com/pages/uProxy/303546106451890" target="_blank"><img src="images/facebook.svg"></a>
+        <a href="https://www.facebook.com/pages/uProxy/303546106451890" target="_blank"><p>Facebook</p></a>
+      </div>
+
+      <div id="developedby" class="twelve columns">
+        <p class="i18n" data-i18n="[html]DEVELOPED_BY"></p>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/jquery.js"></script>
+  <script src="js/i18next.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/addon.js"></script>
+
+  <script>
+    var faqs = [
+      ['whatIsUproxy', 'WHAT_IS_UPROXY'],
+      ['whereToGet', 'WHERE_TO_GET'],
+      ['whatAreCloud', 'WHAT_ARE_CLOUD_SERVERS'],
+      ['whatIsDigitalOcean', 'WHAT_IS_DIGITAL_OCEAN'],
+      ['howToInstallServer', 'HOW_DO_I_INSTALL_UPROXY_ON_SERVER'],
+      ['whatDoGetAccess', 'WHAT_DO_GET_ACCESS'],
+      ['whyDoesUproxyConnect', 'WHY_DOES_UPROXY_CONNECT'],
+      ['howDoIFind', 'HOW_DO_I_FIND'],
+      ['whatIsGitHub', 'WHAT_IS_GITHUB'],
+      ['whenIAmSharingAccess', 'WHEN_I_AM_SHARING_ACCESS'],
+      ['whenIAmGettingAccess', 'WHEN_I_AM_GETTING_ACCESS'],
+      ['willUproxyWork', 'WILL_UPROXY_WORK'],
+      ['howDoesUproxyHelp', 'HOW_DOES_UPROXY_HELP'],
+      ['whyIsItImportant', 'WHY_IS_IT_IMPORTANT'],
+      ['doesUproxyLogData', 'DOES_UPROXY_LOG_DATA'],
+      ['doesUproxyGiveMe', 'DOES_UPROXY_GIVE_ME'],
+      ['whatIsntProxied', 'WHAT_ISNT_PROXIED'],
+      ['whoKnowsThat', 'WHO_KNOWS_THAT'],
+      ['doesUproxyProtect', 'DOES_UPROXY_PROTECT'],
+      ['whyIsUproxyAsking', 'WHY_IS_UPROXY_ASKING'],
+      ['whatIsPortControl', 'WHAT_IS_PORT_CONTROL'],
+      ['howDoesUproxyCompare', 'HOW_DOES_UPROXY_COMPARE'],
+      ['whoMadeUproxy', 'WHO_MADE_UPROXY'],
+      ['whatIsBeta', 'WHAT_IS_BETA'],
+      ['howDoISubmit', 'HOW_DO_I_SUBMIT']
+    ];
+    for (var index in faqs) {
+      var faqTitleSection = "<section class='faq faqlinks' id='links'><ul class='links start'><li><a href='#" + faqs[index][0] + "' class='i18n' data-i18n='" + faqs[index][1] +"'></a></li></ul></section>";
+      $("#faq-links-content").append(faqTitleSection);
+    }
+    for (var index in faqs) {
+      var faqSection = "<section class='faq' id='" + faqs[index][0] +"'><h2 class='i18n' data-i18n='" + faqs[index][1] + "'></h2><div class='i18n' data-i18n='[html]" + faqs[index][1] + "_ANSWER'></div><a class='top i18n' href='#links' data-i18n='BACK_TO_TOP'></a></section>";
+      $("#faq-content").append(faqSection);
+    }
+  </script>
+
+  <script>
+  var parallax = document.getElementById("parallax");
+  var speed = -2;
+
+  window.onscroll = function() {
+    var yOffset = window.pageYOffset;
+    parallax.style.backgroundPosition = "50%" + (yOffset / speed) + "px";
+  }
+  </script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,0 +1,335 @@
+{
+  "DISCUSS": {
+    "description": "",
+    "message": "Discuss"
+  },
+  "UNRESTRICTED_ACCESS_TITLE": {
+    "description": "",
+    "message": "Get unrestricted access to the Internet"
+  },
+  "WHAT_ARE_CLOUD_SERVERS": {
+    "description": "",
+    "message": "What are uProxy cloud servers?"
+  },
+  "WHAT_ARE_CLOUD_SERVERS_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy users can get access in two ways: by proxying their traffic through a friend and by connecting to a server that is running uProxy. uProxy can automate the process of creating a private server on a cloud hosting platform. Currently we support DigitalOcean, though manual setup on other servers is possible. Once created, we make it easy to share access to your server with your friends and family—just go to the \"share\" tab.</p>"
+  },
+  "WHAT_IS_DIGITAL_OCEAN": {
+    "description": "",
+    "message": "What is DigitalOcean?"
+  },
+  "WHAT_IS_DIGITAL_OCEAN_ANSWER": {
+    "description": "",
+    "message": "<p>DigitalOcean is a cloud hosting provider. Once you create an account and set up a payment method, uProxy will be able to create a server under your account. By default, uProxy will set up a server that costs $10 per month. DigitalOcean offers $5 / month machines, and we plan to support these in the future, but right now we recommend against using them, for performance reasons. In addition to credit cards, DigitalOcean accepts PayPal, which integrates with a number of payment processors, including UnionPay. You can pause your server or terminate your DigitalOcean account at any time.</p>"
+  },
+  "HOW_DO_I_INSTALL_UPROXY_ON_SERVER": {
+    "description": "",
+    "message": "How can I install uProxy on my existing server?"
+  },
+  "HOW_DO_I_INSTALL_UPROXY_ON_SERVER_ANSWER": {
+    "description": "",
+    "message": "<p>The uProxy server runs in a Docker container. Details on how to manually set up a server are given on the <a href=\"https://blog.uproxy.org/2016/02/get-access-24x7-through-your-own-uproxy.html\">uProxy blog</a>, and advanced users should be able to figure out how to do this on their own systems.</p>"
+  },
+  "CREATE_CLOUD_TITLE": {
+    "description": "",
+    "message": "Create a private cloud server"
+  },
+  "CREATE_CLOUD_TEXT": {
+    "description": "",
+    "message": "uProxy allows you to connect to your own private server in the cloud. <a href='faq.html#whatAreCloud'>Learn more.</a>"
+  },
+  "SOCIAL_NETWORK_TITLE": {
+    "description": "",
+    "message": "Or connect through a social network"
+  },
+  "SOCIAL_NETWORK_TEXT": {
+    "description": "",
+    "message": "uProxy uses networks like Google, Facebook, and GitHub to help you connect with your friends. <a href='faq.html#whyDoesUproxyConnect'>Learn more.</a>"
+  },
+  "GET_OR_SHARE_TITLE": {
+    "description": "",
+    "message": "Get or share access to the Internet"
+  },
+  "GET_OR_SHARE_TEXT": {
+    "description": "",
+    "message": "Once you’ve each granted permission, you’ll be able to share access with your friend anytime you’re both online. <a href='faq.html#whatDoGetAccess'>Learn more.</a>"
+  },
+  "VIEW_ALL": {
+    "description": "",
+    "message": "View all questions"
+  },
+  "DEVELOPED_BY": {
+    "description": "",
+    "message": "Developed by the <a href=\"https://www.cs.washington.edu/\" target=\"_blank\">University of Washington</a><br /> with contributions from <a href=\"faq.html#whoMadeUproxy\">other developers</a>."
+  },
+  "SEEDED_BY": {
+    "description": "",
+    "message": "Seeded by <a href=\"http://www.google.com/ideas/\" target=\"_blank\">Google Ideas</a>."
+  },
+  "THIS_IS_BETA": {
+    "message": "<i>This is a <a href=\"faq.html#whatIsBeta\">beta</a> release of uProxy.<br> We’d love to hear your feedback!</i>"
+  },
+  "UPROXY_FAQ": {
+    "description": "",
+    "message": "uProxy FAQ"
+  },
+  "WHAT_IS_UPROXY": {
+    "description": "FAQ",
+    "message": "What is uProxy?"
+  },
+  "WHAT_IS_UPROXY_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy is an open source browser extension for Chrome and Firefox that lets users share their route to the Internet with each other. uProxy can make it much harder for a third party to monitor or interfere with the traffic of the user who is getting access. It’s like a personalized VPN service that you can use to provide secure access to friends and family, and to yourself when you travel.</p>"
+  },
+  "WHERE_TO_GET": {
+    "description": "FAQ",
+    "message": "Where should I get uProxy?"
+  },
+  "WHERE_TO_GET_ANSWER": {
+    "description": "",
+    "message": "<p>The easiest way to get uProxy is by going to the <a href=\"install\">Install</a> page. You can also find uProxy in the <a href=\"https://chrome.google.com/webstore/detail/uproxy-part-1-of-2/pjpcdnccaekokkkeheolmpkfifcbibnj\">Chrome Web Store</a> and the <a href=\"https://addons.mozilla.org/en-US/firefox/addon/uproxy-firefox/\">Firefox Add-Ons site</a>. These are the only places you should go to get uProxy. Never download uProxy from anywhere else, as it could be a phony version that could put you at risk.</p>"
+  },
+  "WHAT_DO_GET_ACCESS": {
+    "description": "",
+    "message": "What do “get access” and “share access” mean?"
+  },
+  "WHAT_DO_GET_ACCESS_ANSWER_PREVIEW": {
+    "description": "",
+    "message": "When you are getting access from a friend, all the web traffic from your browser first travels encrypted to your friend’s computer and from there, to the Internet. <a href='faq.html#whatDoGetAccess'>Learn more.</a>"
+  },
+  "WHAT_DO_GET_ACCESS_ANSWER": {
+    "description": "",
+    "message": "<p>When you are <strong>getting access</strong> from a friend, all the web traffic from your browser first travels encrypted to your friend’s computer and from there, to the Internet. This means that, to most websites, the request will appear to be coming from your friend’s computer, and someone monitoring your connection will only see that you have a secure connection to your friend.</p><p>When you are <strong>sharing access</strong>, authorized friends will be able to send their web traffic to your computer and from there to the Internet. Your friend can only connect through a computer if you authorize them on that computer, and you can revoke their authorization at any time.</p>"
+  },
+  "WHY_DOES_UPROXY_CONNECT": {
+    "description": "",
+    "message": "Why does uProxy connect to social networks?"
+  },
+  "WHY_DOES_UPROXY_CONNECT_ANSWER_PREVIEW": {
+    "description": "",
+    "message": "uProxy needs a way to see when your friends are online, and it needs to exchange information (IP address, port, and encryption keys) between peers to set up direct connections. <a href='faq.html#whyDoesUproxyConnect'>Learn more.</a>"
+  },
+  "WHY_DOES_UPROXY_CONNECT_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy needs a way to see when your friends are online, and it needs to exchange information (IP address, port, and encryption keys) between peers to set up direct connections. Instead of operating a central service that could be easily blocked, uProxy connects to social networks that you and your friends are already using. They are only used to help establish a direct connection between users; proxied Internet traffic is not sent through the social network. <strong>uProxy will never post publicly on your behalf.</strong> It only exchanges private messages with friends you choose who are also running uProxy. You can read more about trusting social networks <a href=\"https://github.com/uProxy/uproxy/wiki/Trust\">here</a>.</p>"
+  },
+  "DOES_UPROXY_LOG_DATA_SHORT": {
+    "description": "",
+    "message": "Does uProxy collect data about me?"
+  },
+  "DOES_UPROXY_LOG_DATA_SHORT_ANSWER": {
+    "description": "",
+    "message": "If you do not opt into uProxy’s data reporting, no data is reported about your usage whatsoever. If you do opt in, any usage data is anonymized before it ever leaves your computer, using the same state-of-the-art, privacy-preserving algorithms used in Google Chrome. <a href='faq.html#doesUproxyLogData'>Learn more.</a>"
+  },
+  "DOES_UPROXY_LOG_DATA": {
+    "description": "",
+    "message": "Does uProxy log data about me, and what is uProxy’s privacy policy?"
+  },
+  "DOES_UPROXY_LOG_DATA_ANSWER": {
+    "description": "",
+    "message": "<p>If you do not opt into uProxy’s data reporting, no data is reported about your usage whatsoever. If you do opt in, any usage data is anonymized before it ever leaves your computer, using the same state-of-the-art, privacy-preserving <a href=\"http://googleresearch.blogspot.com/2014/10/learning-statistics-with-privacy-aided.html\">algorithms</a> used in Google Chrome.</p><p>If you manually use the Submit Feedback tool in the settings menu, you have the option to include logs from your recent uProxy usage. Logs may contain personally identifiable information (PII). PII is never shared outside the uProxy team, and any logs that contain PII are retained for at most three months before being expunged.</p><p>All reports are submitted in a way that makes it hard for an observer of the traffic to detect that you’re using uProxy.</p><p>You can read more about uProxy’s data collection <a href=\"https://github.com/uProxy/uproxy/wiki/Data-Collection\">here</a>.<p>"
+  },
+  "WHEN_I_AM_SHARING_ACCESS": {
+    "description": "",
+    "message": "When I’m sharing access with someone, what do they have access to?"
+  },
+  "WHEN_I_AM_SHARING_ACCESS_ANSWER": {
+    "description": "",
+    "message": "<p>Users who are getting access from you are only able to use your Internet connection. They cannot look at files on your computer, see what you’re doing on the Internet, or log into websites using your identity. They also cannot access devices on your local home or work network such as a shared printer or file server.</p>"
+  },
+  "WHEN_I_AM_GETTING_ACCESS": {
+    "description": "",
+    "message": "When I’m getting access from someone, what can they see?"
+  },
+  "WHEN_I_AM_GETTING_ACCESS_ANSWER": {
+    "description": "",
+    "message": "<p>Sharers who are using uProxy normally can only see when getters start and stop getting access from them. uProxy does not reveal any information about the sites that people visit, when they are proxying. However, sharers who are able to use sophisticated network traffic inspection tools would be able to tell which sites a getter is connecting to and see content exchanged with insecure (non-https) sites. That's why it's important for getters to trust the people who are sharing access with them.</p>"
+  },
+  "WILL_UPROXY_WORK": {
+    "description": "",
+    "message": "Where does uProxy work?"
+  },
+  "WILL_UPROXY_WORK_ANSWER": {
+    "description": "",
+    "message": "<p>If access is blocked to all of the social networks that uProxy supports, then you will not be able to use a social network to help you set up a connection with your friends. You can still set up a one-time connection manually, by exchanging links generated by uProxy via a secure channel, but you’ll have to repeat this exchange every time you want to connect to your friend. The advantage of using social networks is that connection establishment is automatic, once authorization is granted.</p>"
+  },
+  "HOW_DO_I_FIND": {
+    "description": "",
+    "message": "How do I find my friends on uProxy?"
+  },
+  "HOW_DO_I_FIND_ANSWER": {
+    "description": "",
+    "message": "<p>You can use the “Connect to a friend” button in the lower right of the contact list to invite friends to proxy with you using one of our supported social networks.</p><p>In order to see when a friend is online, you both have to be logged into uProxy with the same social network at the same time. You can log into multiple social networks simultaneously by going into the menu (the ≡ icon in the top-left) and expanding the header (▾).</p>"
+  },
+  "WHAT_IS_GITHUB": {
+    "message": "What is GitHub and how can I use it?"
+  },
+  "WHAT_IS_GITHUB_ANSWER": {
+    "message": "<p>GitHub is a site for helping developers share code, but uProxy can use GitHub to share the information needed to set up direct connections between friends, just like it uses social networks. GitHub is more accessible to some users than many social networks, and is free to <a href=\"https://github.com/join\">sign up</a>.</p><p>Please note that it’s possible to tell if a GitHub account is using uProxy. If you already have a GitHub account that you don’t want associated with uProxy, you can create a pseudonymous GitHub account and use that with uProxy instead.</p>"
+  },
+  "HOW_DOES_UPROXY_HELP": {
+    "description": "",
+    "message": "How does uProxy help protect my Internet connection?"
+  },
+  "HOW_DOES_UPROXY_HELP_ANSWER": {
+    "description": "",
+    "message": "<p>When you use the Internet normally, your Internet service provider (ISP) is able to see which sites you’re visiting, and may try to interfere with your connection by blocking access to some sites, or even tampering with their content. On Wi-Fi networks that don’t require a password, it’s even possible for another user on the network to see which sites you’re visiting, and for sites that are HTTP (and not HTTPS), it’s possible they can see the content of the traffic, too.</p><p>When you’re getting access through uProxy, the connection between you and your friend is encrypted. Your browser’s traffic is sent through that connection, and then out to the Internet from your friend’s computer. While getting access through uProxy, your ISP should not be able to see what sites you’re visiting, and uProxy intentionally makes it difficult for your ISP to identify and block your uProxy traffic.</p>"
+  },
+  "WHY_IS_IT_IMPORTANT": {
+    "description": "",
+    "message": "Why is it important that I trust the people I am connecting to?"
+  },
+  "WHY_IS_IT_IMPORTANT_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy is designed to help friends who trust one another to share an Internet connection. Connecting to people you don’t trust is risky and not recommended.</p><p>If you get access from someone who is malicious, they may be able to spy on your web browsing and even tamper with your traffic. Besides trusting the person you’re getting access from, you should trust that their Internet connection is secure, too. So if they’re connecting from an unknown public Wi-Fi hotspot that may be insecure, it may be better to wait till they’re connected from a secure network back at home.</p><p>If you share access with someone you don’t know and trust, they may be able to use your connection to engage in illegal activity, and depending on local laws, you may be held legally responsible for facilitating that activity.<p>It’s important to trust anyone you share an Internet connection with, whether a guest on your home Wi-Fi network, or a uProxy friend on the other side of the world.</p>"
+  },
+  "DOES_UPROXY_GIVE_ME": {
+    "description": "",
+    "message": "Does uProxy provide anonymous browsing?"
+  },
+  "DOES_UPROXY_GIVE_ME_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy is not an anonymity tool; it is useful for concealing your browsing from your ISP, but not for hiding your identity from the sites you visit. A website visited by someone who is getting access via uProxy will see the IP address of the person who is sharing access, and the website may be able to discover the IP address of the uProxy user who is getting access. If you need to hide your identity from the websites you visit, we recommend using the <a href=\"https://www.torproject.org/projects/torbrowser.html\">Tor Browser</a>.</p>"
+  },
+  "WHAT_ISNT_PROXIED": {
+    "description": "",
+    "message": "What traffic isn’t proxied, and can uProxy leak information about the sites I visit?"
+  },
+  "WHAT_ISNT_PROXIED_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy only proxies traffic for the web browser it is running in, not for other applications. There are some uncommon situations where the browser might make unproxied requests, and some web technologies, notably Flash and WebRTC, are capable of making requests that don’t go through the proxy. The same caveats often apply to VPNs. Users with strong privacy needs are encouraged to consider the <a href=\"https://www.torproject.org/projects/torbrowser.html\">Tor Browser</a>, which is designed specifically to minimize what an observer of your traffic can learn about your activity.</p>"
+  },
+  "WHO_KNOWS_THAT": {
+    "description": "",
+    "message": "Who knows that I’m using uProxy?"
+  },
+  "WHO_KNOWS_THAT_ANSWER": {
+    "description": "",
+    "message": "<p>Anyone you connect with knows that you’re using uProxy. In addition, if you choose to connect uProxy to a social network such as Facebook, the administrators of the social network can tell that you use uProxy, and your friends on that network who are using uProxy may also be able to tell.</p><p>For users connecting with a Gmail or Facebook account, uProxy uses Firebase, a service operated by Google. The Firebase team, and the uProxy team which administers the uProxy Firebase account, can therefore access information about which accounts are using uProxy.</p><p>If you are concerned about using uProxy with your personal account, create a dedicated pseudonymous account and use that with uProxy instead.</p><p>Note that none of these services ever see what sites or pages you’re visiting while using uProxy. Only a user you’re getting access through would be in a position to monitor your traffic. So again, only get access through friends you trust to share an Internet connection.</p>"
+  },
+  "DOES_UPROXY_PROTECT": {
+    "description": "",
+    "message": "Does uProxy protect me from viruses, phishing, or hacking?"
+  },
+  "DOES_UPROXY_PROTECT_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy can help protect you from an adversary who is trying to redirect you to a malicious site or otherwise tamper with your traffic. However, uProxy’s primary focus is on enabling users to share access to the open Internet.</p>"
+  },
+  "WHY_IS_UPROXY_ASKING": {
+    "description": "",
+    "message": "Why is uProxy asking for these Chrome permissions?"
+  },
+  "WHY_IS_UPROXY_ASKING_ANSWER": {
+    "description": "",
+    "message": "<p>When you install uProxy for Chrome, it asks for permission to (1) read and change all your data on the websites you visit, and (2) communicate with cooperating websites. These permissions are necessary for uProxy to route your traffic through your friend’s connection. No data about the websites you visit is ever sent to the uProxy team or the social networks you connect to.</p>"
+  },
+  "WHAT_IS_PORT_CONTROL": {
+    "description": "",
+    "message": "What is port control?"
+  },
+  "WHAT_IS_PORT_CONTROL_ANSWER": {
+    "description": "",
+    "message": "<p>Network Address Translation (NAT) is typically implemented by routers to allow a single public IP address to be shared by multiple devices on the network. However, this can make it challenging for users to establish direct connections with each other, and some types of NATs (particularly symmetric NATs) can prevent uProxy from successfully establishing connections.</p><p>If your router has port control enabled (UPnP, NAT-PMP, or PCP), uProxy can instruct your router to specifically allow incoming connections from other uProxy users. If either side of a uProxy connection is able to use port control, connections will almost always be successful, regardless of NAT configuration. For information on enabling port control on your router, check your router’s manual or search the web for “(router name) enable UPnP”.</p>"
+  },
+  "HOW_DOES_UPROXY_COMPARE": {
+    "description": "",
+    "message": "How does uProxy compare to VPNs?"
+  },
+  "HOW_DOES_UPROXY_COMPARE_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy is designed to stay fast and blocking-resistant even as the number of users increases. In contrast, VPNs often rely on many users sharing the same server, and don’t take steps to obfuscate their traffic. So they can get slower at peak times and can be easy for censors to identify and block. Because uProxy users connect to each other rather than to a few common servers, and because uProxy takes extra steps to obfuscate users’ traffic, uProxy is designed to resist these problems.</p><p>Using an untrusted VPN may also expose users to monitoring or attacks. uProxy is designed so that users get access from friends and family they know and trust. And unlike many VPNs, uProxy runs as a browser extension with the lowest privileges possible, has been approved by the official Chrome and Firefox extension sites, and is open source software. Providing users with options whose trustworthiness can be verified as much as possible is a core value of the uProxy project.</p><p>Another major difference is that VPNs often proxy the traffic of all the applications running on the computer, whereas uProxy only affects the traffic of the browser it’s running in. So you can use one browser with uProxy to access blocked sites, and at the same time use another browser without uProxy for sites you don’t want to proxy. (Note: some special types of traffic such as WebRTC may not go through uProxy.)</p>"
+  },
+  "WHO_MADE_UPROXY": {
+    "description": "",
+    "message": "Who is developing uProxy?"
+  },
+  "WHO_MADE_UPROXY_ANSWER": {
+    "description": "",
+    "message": "<p>uProxy is being developed by the University of Washington and has received contributions from Brave New Software and other members of the open source community.</p>"
+  },
+  "WHAT_IS_BETA": {
+    "description": "",
+    "message": "What is a beta release?"
+  },
+  "WHAT_IS_BETA_ANSWER": {
+    "description": "",
+    "message": "<p>This beta version of uProxy is still under development, but we believe it should work well for users who have access to at least one of the social networks it supports. We’d love for you to try it, and help us make improvements by giving any feedback you’d like to share. You can post to our public discussion list <a href=\"https://groups.google.com/forum/#!forum/uproxy-discuss\">here</a>, or email us privately at <a href=\"mailto:info@uproxy.org\">info@uproxy.org</a>. If you’re interested in following progress or contributing to the open source project, please see our <a href=\"https://github.com/uProxy/uproxy/issues\">issue tracker on GitHub</a>.</p>"
+  },
+  "HOW_DO_I_SUBMIT": {
+    "description": "",
+    "message": "How do I submit feedback?"
+  },
+  "HOW_DO_I_SUBMIT_ANSWER": {
+    "description": "",
+    "message": "<p>To submit feedback from within uProxy, go into the menu (≡ icon) and choose “Submit Feedback”. You can also email us at <a href=\"mailto:info@uproxy.org\">info@uproxy.org</a>.</p>"
+  },
+  "BACK_TO_TOP": {
+    "description": "",
+    "message": "Back to top"
+  },
+  "HOME": {
+    "description": "",
+    "message": "Home"
+  },
+  "BACK_TO_HOME": {
+    "description": "A link that will take the user to the main website homepage, should include text indicating that the user has previously been on the homepage",
+    "message": "Back to uProxy Home"
+  },
+  "CODE_OF_CONDUCT": {
+    "description": "",
+    "message": "Code of Conduct"
+  },
+  "CODE_OF_CONDUCT_CONTENT": {
+    "description": "",
+    "message": "<p>We welcome all users to participate in accordance with our <a href=\"http://todogroup.org/opencodeofconduct/#uProxy/info@uproxy.org\">code of conduct</a>.</p><p>We look forward to hearing from you!</p>"
+  },
+  "UPROXY_FAQ_TITLE": {
+    "description": "Heading of uProxy FAQs page.",
+    "message": "FAQs"
+  },
+  "UPROXY_IS_SOCIAL": {
+    "description": "Title for uProxy footer.",
+    "message": "uProxy is on social"
+  },
+  "ADD_ON": {
+    "description": "Title and text for addon prompt.",
+    "message": "<span class='welcome'>Welcome to uProxy!</span><br>Click the uProxy icon in your add-ons bar to start connecting."
+  },
+  "UPROXY_IS_FOR_PEOPLE": {
+    "description": "Section title that starts with uProxy is for people.",
+    "message": "uProxy is for people who need safe and unrestricted access to the Internet and those who have a secure connection to share with friends."
+  },
+  "GET_UNRESTRICTED_ACTION_TITLE": {
+    "description": "Title for section about getting unrestricted access.",
+    "message": "Get unrestricted access"
+  },
+  "GET_UNRESTRICTED_ACTION_TEXT": {
+    "description": "Text for section about getting unrestricted access.",
+    "message": "<a href=\"faq.html#whatDoGetAccess\">Get unrestricted access</a> to the same sites your friends have access to and prevent interference from your internet service provider."
+  },
+  "GIVE_UNRESTRICTED_ACCESS_TITLE": {
+    "description": "Title for section about sharing access.",
+    "message": "Give unrestricted access"
+  },
+  "GIVE_UNRESTRICTED_ACCESS_TEXT": {
+    "description": "Text for section about sharing access.",
+    "message": "<a href=\"faq.html#whatDoGetAccess\">Give unrestricted access</a> to friends who have a censored Internet connection. Under your control, your friends will have access to your connection only."
+  },
+  "UPROXY_IS_AN_ADDON": {
+    "description": "Section title that starts with uProxy is a browser add-on.",
+    "message": "uProxy is a browser add-on that helps you get and share internet access from a social network or from a private cloud server."
+  },
+  "FREQUENTLY_ASKED_QUESTIONS": {
+    "description": "FAQs Title",
+    "message": "Frequently asked questions"
+  },
+  "UPROXY_SOCIAL": {
+    "description": "",
+    "message": "uProxy is on social"
+  },
+  "NET_WOUT_BORDERS": {
+    "description": "",
+    "message": "Internet without borders"
+  }
+}
