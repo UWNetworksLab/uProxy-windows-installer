@@ -32,30 +32,34 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <div class="addon" style="display: none;">
-    <button onclick="closeAddOn()">x</button>
+    <button onclick="closeAddOn()"><img src="images/close.svg"></button>
     <p>
       <img src="images/addon.svg">
       <span class="i18n" data-i18n="[html]ADD_ON"></span>
     </p>
   </div>
 
-  <div class="pattern" id="parallax">
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns" style="margin-top: 20%; margin-bottom: 20%; text-align:left; text-decoration: none;">
-          <a href="index.html" style="border-bottom: 0px;"><img src="images/logo.svg"></a>
-          <h4 class="i18n" data-i18n="UPROXY_FAQ_TITLE"></h4>
+  <div id="faq-header">
+    <div id="left-pattern"><img src="images/faq1.svg"></div>
+    <div class="row">
+      <div class="container faq-container">
+        <div class="twelve columns" style="padding-top:15%; text-align:left; text-decoration: none;">
+          <a href="index.html"><img class="logo" src="images/green-logo.svg"></a>
+          <h1 class="i18n" data-i18n="[html]UPROXY_FAQ_TITLE"></h1>
         </div>
       </div>
+      <div id="right-pattern"><img src="images/faq2.svg"></div>
     </div>
   </div>
 
-  <div class="container">
-    <div id="faq-links-content" class="twelve columns">
+  <div class="container faq-container">
+    <div id="faq-links" class="twelve columns">
     </div>
   </div>
 
-  <div class="container">
+  <hr>
+
+  <div class="container faq-container">
     <div id="faq-content" class="twelve columns">
     </div>
   </div>
@@ -144,8 +148,8 @@
       ['howDoISubmit', 'HOW_DO_I_SUBMIT']
     ];
     for (var index in faqs) {
-      var faqTitleSection = "<section class='faq faqlinks' id='links'><ul class='links start'><li><a href='#" + faqs[index][0] + "' class='i18n' data-i18n='" + faqs[index][1] +"'></a></li></ul></section>";
-      $("#faq-links-content").append(faqTitleSection);
+      var faqTitleSection = "<section class='faq' id='links'><ul class='links start'><li><a href='#" + faqs[index][0] + "' class='i18n' data-i18n='" + faqs[index][1] +"'></a></li></ul></section>";
+      $("#faq-links").append(faqTitleSection);
     }
     for (var index in faqs) {
       var faqSection = "<section class='faq' id='" + faqs[index][0] +"'><h2 class='i18n' data-i18n='" + faqs[index][1] + "'></h2><div class='i18n' data-i18n='[html]" + faqs[index][1] + "_ANSWER'></div><a class='top i18n' href='#links' data-i18n='BACK_TO_TOP'></a></section>";

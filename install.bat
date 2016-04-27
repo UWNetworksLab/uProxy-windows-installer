@@ -151,14 +151,18 @@ FOR %%s in (%languages%) DO (
     ECHO remove "welcome/images/3.svg" >> !uninstallFile!
     ECHO remove "welcome/images/addon.svg" >> !uninstallFile!
     ECHO remove "welcome/images/blogger.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/close.svg" >> !uninstallFile!
     ECHO remove "welcome/images/discuss.svg" >> !uninstallFile!
     ECHO remove "welcome/images/dots.gif" >> !uninstallFile!
     ECHO remove "welcome/images/facebook.svg" >> !uninstallFile!
     ECHO remove "welcome/images/favicon.png" >> !uninstallFile!
     ECHO remove "welcome/images/favicon.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/faq1.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/faq2.svg" >> !uninstallFile!
     ECHO remove "welcome/images/github.svg" >> !uninstallFile!
     ECHO remove "welcome/images/globe.svg" >> !uninstallFile!
     ECHO remove "welcome/images/gplus.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/green-logo.svg" >> !uninstallFile!
     ECHO remove "welcome/images/line.svg" >> !uninstallFile!
     ECHO remove "welcome/images/logo.svg" >> !uninstallFile!
     ECHO remove "welcome/images/pattern.gif" >> !uninstallFile!
