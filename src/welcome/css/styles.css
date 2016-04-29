@@ -36,25 +36,26 @@
   width: auto;
 }
 
-#containermargin{
+#containermargin {
   padding-bottom:8%;
 }
+
 .width {
   width:100%;
   background-color: #f6f8f9;
 }
 
 #footer {
-  background-color: #185462;
+  background-color: #155160;
 }
 
-#footer h2{
+#footer h2 {
   text-align: center;
   margin-top:15%;
   color:#ffffff;
 }
 
-#footericons{
+#footericons {
   display: inline-table;
   margin-left: 20px;
   margin-right: 20px;
@@ -69,7 +70,7 @@
   color: #ffffff;
 }
 
-#footericons img{
+#footericons img {
   width:96px;
 }
 
@@ -79,18 +80,18 @@
   margin-bottom:15%;
 }
 
-#how{
+#how {
   text-align: center;
   top-margin:10%;
   overflow:hidden;
 }
 
-#how img{
+#how img {
   width:75%;
   max-width: 300px;
 }
 
-#howtext{
+#howtext {
   max-width:328px;
   margin-top:8%;
   overflow:hidden;
@@ -100,16 +101,16 @@
   margin-top:15%;
 }
 
-#marginleft{
+#marginleft {
   margin-bottom:15%;
   margin-left:7%;
 }
 
-#faqtitlemargin{
+#faqtitlemargin {
   margin-top:7%;
 }
 
-#launchmargin{
+#launchmargin {
   margin-top:4%;
 }
 
@@ -122,7 +123,7 @@
   box-sizing: border-box; 
 }
 
-#white{
+#white {
   background-color: #ffffff;
   width: 100%;
 }
@@ -222,13 +223,7 @@ body {
   margin: 0px;
 }
 
-.top{
-  width:100%;
-  display: block;
-  background-color: #00AD9B;
-}
-
-.addon{
+.addon {
   width: 300px;
   background-color: #fff;
   position:fixed;
@@ -257,7 +252,7 @@ body {
   border-width: 12px;
 }
 
-.addon img{
+.addon img {
   height: 100%;
   display: block;
   float: right;
@@ -281,7 +276,7 @@ body {
   overflow: hidden;
 }
 
-.addon .welcome{
+.addon .welcome {
   color: #00C2AE;
   font-weight: 600;
 }
@@ -294,39 +289,36 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500; 
 }
 
-h1 { 
-  font-size: 4.0rem; 
-  line-height: 1.2;  
-  letter-spacing: -.1rem;
+h1 {
+  font-weight:600;
+  font-size: 10.0rem;
+  line-height: 1.35;
+  letter-spacing: -.08rem;
+  color:#fff;
+  padding-top: 20px;
 }
 
 h2 {
-  color: #227689; 
   font-size: 3.0rem; 
   line-height: 1.5; 
   font-weight:600;
 }
 
 h3 {  
-  color: #227689; 
   font-size: 2.0rem; 
   line-height: 1.6; 
   font-weight:600; 
 }
 
-h4 { 
-  font-weight:600; 
-  font-size: 10.0rem; 
-  line-height: 1.35; 
-  letter-spacing: -.08rem; 
-  color:#fff; 
-  padding-top: 20px; 
+h4 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight:600;
 }
 
 h5 { 
   font-size: 1.8rem; 
   line-height: 1; 
-  color: #155160; 
   font-weight:600; 
 }
 
@@ -338,10 +330,10 @@ h6 {
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
+  h1 { font-size: 10.0rem; }
   h2 { font-size: 3.5rem; }
-  h3 { font-size: 2rem; }
-  h4 { font-size: 10.0rem; }
+  h3 { font-size: 2.0rem; }
+  h4 { font-size: 2.0rem; }
   h5 { font-size: 1.8rem; }
   h6 { font-size: 1.5rem; }
 }
@@ -350,7 +342,7 @@ p {
   margin-top: 0; 
 }
 
-h4 span{
+h1 span {
   border-bottom-style: solid;
   border-bottom-width: 10px;
   border-color: #00D2BA;
@@ -393,11 +385,12 @@ h3 a {
 
 .addon button {
   height: 25px;
+  width: 25px;
   font-size: 18px;
   color: #155160;
   background-color: #fff !important;
   padding: 0px;
-  margin: 0px 20px;
+  margin: 16px 0px -10px 16px;
   float: left;
   hover {
     color: #fff;
@@ -597,7 +590,7 @@ there.
 
 /* Larger than mobile */
 @media (min-width: 400px) {
-  h4 { font-size: 8.0rem; 
+  h1 { font-size: 8.0rem;
     line-height: 1.35;
   }
 
@@ -612,7 +605,7 @@ there.
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  h4 { font-size: 9.0rem; 
+  h1 { font-size: 9.0rem;
   } 
   .pattern {
     background-size: 800px;
@@ -621,7 +614,7 @@ there.
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-  h4 { font-size: 9.0rem; 
+  h1 { font-size: 9.0rem;
     line-height: 1.35;
   }
 
@@ -632,7 +625,7 @@ there.
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
-  h4 { font-size: 10.0rem; 
+  h1 { font-size: 10.0rem;
     line-height: 1.35;
   }
 
@@ -643,15 +636,39 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-  h4 { font-size: 10.0rem; 
+  h1 { font-size: 10.0rem;
     line-height: 1.35;
   }
 }
 
 /* FAQs
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.faq-container {
+  width: 50%;
+}
+
 .start {
   text-align: start;
+}
+
+#faq-header h1 {
+  color: #2FACBD;
+  font-size: 76px;
+  font-weight: 600px;
+  line-height: 94px;
+}
+
+#faq-header a {
+  border-bottom: 0px;
+}
+
+#left-pattern {
+  float: left;
+}
+
+#right-pattern {
+  float: right;
+  margin-top: -14%;
 }
 
 section.faq {
@@ -660,19 +677,18 @@ section.faq {
   margin-right: auto;
 }
 
-.faqlinks {
-  border-bottom: 0px !important;
-  padding: 0px !important;
+#faq-links {
+  padding: 100px 0px;
 }
 
-.faqlinks a {
+#faq-links a {
   color: #155160;
-  border-bottom: 1px dotted #ccc;
   text-decoration: none;
 }
 
-.faqlinks a:hover {
+#faq-links a:hover {
   color: #00AC9B;
+  text-decoration: underline;
 }
 
 ul.links {
@@ -682,56 +698,41 @@ ul.links {
 }
 
 ul.links li {
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 600;
   margin-bottom: 10px;
-  font-weight: 300;
+  line-height: 32px;
 }
 
-a.learn-more, a.top {
-  display: inline;
-  background-color: #fff;
+#faq-content section {
+  padding: 100px 0px 0px 0px;
 }
 
-section:not(#header):not(:last-of-type) {
-  border-bottom: 1px solid #eee;
-  padding: 100px 40px;
+#faq-content h2 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 64px;
 }
 
-@media screen and (max-width: 630px) {
-  section:not(#header):not(:last-of-type) {
-    padding: 70px 40px;
+@media (max-width: 1100px) {
+  #faq-header img:not(.logo) {
+    height: 108px;
+  }
+
+  #right-pattern {
+    margin-top: 0%;
   }
 }
 
-section:last-of-type {
-  border-bottom: none;
-  padding: 100px 40px 0;
-}
+@media (max-width: 750px) {
+  #faq-header h1 {
+    font-size: 6.0rem;
+    font-size: 54px;
+    line-height: 72px;
+  }
 
-.faq h2 {
-  font-size: 42px;
-  line-height: 64px;
-  font-weight: 600;
-}
-
-@media screen and (max-width: 630px) {
-  .faq h2 {
+  #faq-content h2 {
     font-size: 32px;
     line-height: 46px;
   }
-}
-
-#faq-links-content {
-  margin: 50px 0px !important;
-}
-
-#faq-content {
-  text-align: center;
-  border-top: 1px solid #eee;
-}
-
-#faq-content p {
-  font-size: 14px;
-  font-weight: 300;
-  text-align: center;
 }

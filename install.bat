@@ -1,7 +1,7 @@
 :: Name:     install.bat
 :: Purpose:  Builds Windows Installer for Firefox with uProxy
 :: Version: 0.1.1
-:: uProxy version: 0.8.39
+:: uProxy version: 0.8.40
 
 @ECHO OFF
 SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
@@ -10,7 +10,7 @@ REM Current directory path
 SET parent=%~dp0
 
 REM URL to get the uProxy add-on, get here: https://addons.mozilla.org/en-US/firefox/addon/uproxy-firefox/
-SET uproxyAddonURL=https://addons.mozilla.org/firefox/downloads/file/421107/uproxy_beta-0.8.39-fx-windows.xpi
+SET uproxyAddonURL=https://addons.mozilla.org/firefox/downloads/file/428554/uproxy_beta-0.8.40-fx-windows.xpi
 
 REM Set version and language with default values
 SET version=45.0.1
@@ -151,14 +151,18 @@ FOR %%s in (%languages%) DO (
     ECHO remove "welcome/images/3.svg" >> !uninstallFile!
     ECHO remove "welcome/images/addon.svg" >> !uninstallFile!
     ECHO remove "welcome/images/blogger.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/close.svg" >> !uninstallFile!
     ECHO remove "welcome/images/discuss.svg" >> !uninstallFile!
     ECHO remove "welcome/images/dots.gif" >> !uninstallFile!
     ECHO remove "welcome/images/facebook.svg" >> !uninstallFile!
     ECHO remove "welcome/images/favicon.png" >> !uninstallFile!
     ECHO remove "welcome/images/favicon.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/faq1.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/faq2.svg" >> !uninstallFile!
     ECHO remove "welcome/images/github.svg" >> !uninstallFile!
     ECHO remove "welcome/images/globe.svg" >> !uninstallFile!
     ECHO remove "welcome/images/gplus.svg" >> !uninstallFile!
+    ECHO remove "welcome/images/green-logo.svg" >> !uninstallFile!
     ECHO remove "welcome/images/line.svg" >> !uninstallFile!
     ECHO remove "welcome/images/logo.svg" >> !uninstallFile!
     ECHO remove "welcome/images/pattern.gif" >> !uninstallFile!
