@@ -46,3 +46,37 @@ For downloads, please [click here](https://github.com/uProxy/uproxy-windows-inst
 - If you've already installed Firefox on your computer, uninstall Firefox.
 - Clear old Firefox data and profiles by deleting two directories: `C:\Users\<user>\AppData\Roaming\Mozilla\` and `C:\Users\<user>\AppData\Local\Mozilla`
 - Run the new setup .exe file. Check to see that the landing page is displayed and uProxy is installed.
+
+### To create a release:
+1. Create a new tag for the release, e.g. `git tag -a v1.2.3 -m 'tag v1.2.3'`
+1. Push it to GitHub, e.g. `git push origin v1.2.3`
+1. You should now see it on the
+   https://github.com/uProxy/uproxy-windows-installer/releases
+   page.
+1. Check out a local `dist` branch tracking the corresponding remote branch:
+   `git fetch && git checkout dist`
+1. Replace the build artifacts in the repo with the new ones you just built:
+   `git rm _/*.exe && cp /path/to/new/builds/* _/`
+1. Update links in the README to point to the latest builds you're about to
+   push.
+1. Stage these changes: `git add .`
+1. Amend the previous commit so as not to bloat the history:
+   `git commit --amend --date (date)`
+1. Force-push the commit: `git push -f`
+1. Verify that
+   https://github.com/uProxy/uproxy-windows-installer/tree/dist#download-latest
+   contains the latest download links and that they work.
+1. After you pushed the tag,
+   GitHub will have automatically created a corresponding release
+   under https://github.com/uProxy/uproxy-windows-installer/releases.
+   Note the previous releases have descriptions populated, and the new one
+   doesn't.
+   Click "Edit" next to the new release, and:
+   - In the description field, add a big, bold download link
+     advising users to download from
+     https://github.com/uProxy/uproxy-windows-installer/tree/dist#download-latest
+   - Note the included uProxy and Firefox versions.
+   - Note the available languages.
+   - Save and make sure everything looks good.
+1. Finally, upload the latest release artifacts to the archive in Drive:
+   https://drive.google.com/drive/folders/0B22PfwRIULBDc1VicmpNVk5qWk0
