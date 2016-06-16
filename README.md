@@ -4,6 +4,11 @@ uProxy is a browser plugin that allows users to reach the open internet through 
 
 The uProxy Windows Installer creates a modified version of the Firefox Windows Installer with the uProxy extension enabled by default. This allows Windows users to get up and running with uProxy quickly.
 
+## [Download](https://github.com/uProxy/uproxy-windows-installer/tree/dist#download-latest)
+
+For downloads, please [click here](https://github.com/uProxy/uproxy-windows-installer/tree/dist#download-latest).
+
+
 ###Dev setup:
 - Need to use a Windows OS
 - [7-zip](http://www.7-zip.org/) and signtool, which is part of [Windows SDK 7.1](https://www.microsoft.com/en-us/download/details.aspx?id=8279), need to be installed
